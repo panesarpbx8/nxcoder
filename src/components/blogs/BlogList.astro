@@ -1,0 +1,91 @@
+---
+import HashtagList from './HashtagList.astro';
+import { Blog } from '../../lib/blog';
+
+export interface Props {
+  blogs: Blog[];
+}
+
+const { blogs } = Astro.props as Props;
+
+---
+
+<div class="blogs">
+  {blogs.map(blog => (
+    <div class="blog">
+      <a href={blog.url}>
+        <img src={`/assets${blog.url}/img/cover.png`} alt={blog.frontmatter.title}>
+      </a>
+      <div class="blog__wrapper">
+        <div class="blog__title">
+          { blog.frontmatter.title }
+        </div>
+        <div class="blog__headline">
+          { blog.frontmatter.headline }
+        </div>
+        <div class="blog__hashtags">
+          <HashtagList hashtags={blog.frontmatter.hashtags}/>
+        </div>
+      </div>
+    </div>
+  ))}
+</div>
+
+<style lang="scss">
+.blogs {
+  display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(275px, 350px));
+  justify-content: center;
+  gap: var(--default-padding);
+  margin-bottom: 4rem;
+}
+
+.blog {
+  background-color: var(--bgv);
+  border-radius: 5px;
+  box-shadow: var(--shadow);
+  transition: transform 200ms ease-in-out;
+
+  &:hover {
+    transform: translateY(-10px);
+  }
+
+  &__cover__img {
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+    cursor: pointer;
+  }
+
+  &__wrapper {
+    padding: 1rem;
+    cursor: pointer;
+  }
+
+  &__title {
+    margin-bottom: 1rem;
+    text-transform: uppercase;
+    color: var(--primary-color);
+    font-family: 'Baloo 2', sans-serif;
+    font-size: var(--default-padding);
+    font-weight: 600;
+    line-height: var(--default-padding);
+  }
+
+  &__headline {
+    color: var(--text);
+    font-size: 1.1rem;
+    margin-bottom: var(--default-padding);
+  }
+
+  &__hashtags {
+    margin-bottom: .5rem;
+  }
+}
+
+
+@media screen and (min-width: 768px) {
+  .blogs {
+    gap: 3rem;
+  }
+}
+</style>

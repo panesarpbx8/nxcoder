@@ -1,0 +1,21 @@
+button {
+  user-select: none;
+  border: none;
+}
+
+.btn {
+  padding: .5rem 1rem;
+  color: var(--bg);
+  border-radius: 2px;
+  font-size: 1rem;
+  transition: background-color 200ms ease;
+
+  &__primary {
+    background-color: var(--primary-color);
+  }
+}
+
+.btn:hover {
+  cursor: pointer;
+  background-color: var(--primary-dark);
+}

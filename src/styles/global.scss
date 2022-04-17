@@ -1,0 +1,104 @@
+@import './prism.scss';
+@import './layout.scss';
+@import './buttons.scss';
+
+:root {
+  --primary-color: #128a9c;
+  --primary-light: #128a9c25;
+  --primary-dark: #0e7080;
+  
+  --bg: #f5f8fd;
+  --bgv: #ffffff;
+	--text: #46566d;
+
+	--window-width: 1200px;
+  --default-padding: 1.5rem;
+
+  --shadow: 0 5px 10px #59626b11;
+}
+
+.dark {
+  --primary-color: #50d7ea;
+  --primary-light: #50d7ea25;
+  --primary-dark: #49c7d8;
+
+  --bg: #001E26;
+  --bgv: #012A35;
+	--text: #e3edf2;
+  
+  --shadow: 0 5px 10px #23272b50;
+}
+
+.sm { display: block; }
+.lg { display: none; }
+
+@media screen and (min-width: 768px) {
+  .sm { display: none; }
+  .lg { display: block; }
+}
+
+:target::before {
+  content: '';
+  display: block;
+  height: 5rem;
+  margin-top: -5rem;
+}
+
+* {
+  box-sizing: border-box;
+  outline: none;
+  scroll-behavior: smooth;
+}
+
+*::selection {
+  background-color: var(--primary-color);
+  color: var(--bg);
+}
+
+body {
+	font-family: 'Inter', sans-serif;
+	background-color: var(--bg);
+  transition: background-color 200ms ease;
+	color: var(--text);
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  max-width: var(--window-width);
+  margin: 0 auto;
+  padding: 0 var(--default-padding);
+}
+
+h1, h2, h3, p {
+  margin: 0;
+}
+
+a {
+  text-decoration: none;
+  color: var(--primary-color);
+}
+
+img {
+  width: 100%;
+  height: auto;
+}
+
+.page-heading {
+  font-family: 'Baloo Thambi 2', cursive;
+  font-size: 2.5rem;
+  text-align: center;
+  text-transform: uppercase;
+  margin-bottom: var(--default-padding);
+}
+
+.page-subheading {
+  text-align: center;
+  margin-bottom: 3rem;
+  font-size: 1.25rem;
+}
+
+@font-face {
+  font-family: 'Aquire';
+  src: url('/Aquire.otf');
+}

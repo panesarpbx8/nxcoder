@@ -1,0 +1,24 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import HashtagList from '../../components/blogs/HashtagList.astro';
+
+let data: any = await Astro.glob('../blogs/**/*.md');
+data = data.map(data => data.frontmatter.hashtags);
+
+const hashtagsUnique = new Set<string>();
+
+for (const entry of data)
+  for (const hashtag of entry)
+    hashtagsUnique.add(hashtag);
+
+const hashtags = Array.from(hashtagsUnique).sort();
+---
+
+<BaseLayout>
+  <h1 class="page-heading">Hashtags</h1>
+  <p class="page-subheading">Select any of these hashtags to view the blogs related to that technology.</p>
+
+  <div class="force-center">
+    <HashtagList hashtags={hashtags}/>
+  </div>
+</BaseLayout>

@@ -1,0 +1,42 @@
+{
+  "name": "nxcoder",
+  "version": "0.0.1",
+  "private": true,
+  "scripts": {
+    "dev:astro": "astro dev",
+    "dev:ng": "ng serve",
+    "build:astro": "astro build",
+    "build:ng": "ng build && node src/build.ts",
+    "build": "yarn build:ng && yarn build:astro",
+    "git": "git add . && git commit -m init"
+  },
+  "devDependencies": {
+    "@angular-devkit/build-angular": "~13.2.6",
+    "@angular/cli": "~13.2.6",
+    "@angular/compiler-cli": "~13.2.0",
+    "@astrojs/preact": "^0.1.1",
+    "@types/node": "^12.11.1",
+    "astro": "^1.0.0-beta.12",
+    "concat": "^1.0.3",
+    "fs-extra": "^10.0.1",
+    "sass": "^1.50.0",
+    "typescript": "~4.5.2"
+  },
+  "dependencies": {
+    "@angular/animations": "~13.2.0",
+    "@angular/common": "~13.2.0",
+    "@angular/compiler": "~13.2.0",
+    "@angular/core": "~13.2.0",
+    "@angular/elements": "^13.3.3",
+    "@angular/fire": "^7.3.0",
+    "@angular/forms": "~13.2.0",
+    "@angular/platform-browser": "~13.2.0",
+    "@angular/platform-browser-dynamic": "~13.2.0",
+    "@angular/router": "~13.2.0",
+    "firebase": "^9.6.11",
+    "preact": "^10.7.1",
+    "rxjs": "~7.5.0",
+    "tslib": "^2.3.0",
+    "zone.js": "~0.11.4"
+  }
+}

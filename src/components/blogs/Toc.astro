@@ -1,0 +1,39 @@
+---
+const { tocs } = Astro.props;
+---
+
+<div class="toc">
+  <h1>Contents</h1>
+  {tocs.map(toc => (
+    <div>
+      <a href={`#${toc.slug}`}>{toc.text}</a>
+    </div>
+  ))}
+</div>
+
+<style lang="scss">
+.toc {
+  background-color: var(--bgv);
+  padding: var(--default-padding);
+  box-shadow: var(--shadow);
+  height: fit-content;
+  position: sticky;
+  top: 6rem;
+
+  h1 {
+    font-size: 1.5rem;
+    border-bottom: .15rem solid var(--primary-light);
+    text-transform: capitalize;
+    margin-bottom: 1rem;
+    padding-bottom: .5rem;
+  }
+
+  a {
+    display: block;
+    margin-bottom: .75rem;
+    &:hover {
+      cursor: pointer;
+    }
+  }
+}
+</style>

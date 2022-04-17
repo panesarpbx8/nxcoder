@@ -1,0 +1,66 @@
+---
+const { blog } = Astro.props;
+---
+  
+<div class="blog-hero">
+  <h1 class="blog-hero__title page-heading">{blog.title}</h1>
+  <div class="blog-hero__matter">
+    <div class="blog-hero__matter__author">
+      <img class="rounded" src={blog.authorImage} alt={blog.author}>
+      <p>By <a target="_blank" rel="noreferrer" href={blog.authorLink}>{blog.author}</a></p>
+    </div>
+    <p>Posted {blog.createdAt}</p>
+    <a target="_blank" rel="noreferrer" href={blog.source}>Source Code</a>
+  </div>
+  <p class="blog-hero__headline">{blog.headline}</p>
+</div>
+
+<style lang="scss">
+.blog-hero {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding: 3rem 0 5rem 0;
+  
+  &__title {
+    font-size: 3.5rem;
+    line-height: 1;
+    margin-bottom: 2rem;
+    text-align: center;
+  }
+  
+  &__matter {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    align-items: center;
+    margin-bottom: 2rem;
+
+    &__author {
+      display: flex;
+      align-items: center;
+      gap: .5rem;
+
+      img {
+        width: 30px;
+      }
+    }
+  }
+
+  &__headline {
+    font-size: 1.25rem;
+    max-width: 50ch;
+    padding-left: 1rem;
+    border-left: .2rem solid var(--primary-color);
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .blog-hero {
+    &__matter {
+      flex-direction: row;
+    }
+  }
+}
+</style>

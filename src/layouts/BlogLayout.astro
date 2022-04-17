@@ -1,0 +1,139 @@
+---
+import BaseLayout from './BaseLayout.astro';
+import HashtagList from '../components/blogs/HashtagList.astro';
+import BlogHero from '../components/blogs/BlogHero.astro';
+import Toc from '../components/blogs/Toc.astro';
+import { slugify } from '../lib/helper';
+
+const { content } = Astro.props;
+
+const tocs = content.astro.headers;
+const slug = slugify(content.title);
+---
+
+<BaseLayout title={content.title} description={content.headline}>
+  <BlogHero blog={content} />
+  <div class="blog blog-wrapper">
+    <div class="article"> 
+      <div class="blog__cover">
+        <img src={`/assets/blogs/${slug}/img/cover.png`} alt={content.title}>
+      </div> 
+      <div class="blog__content"><slot></slot></div>
+    </div>
+    <div class="side-panel">
+      <div class="save-button-container">
+        <button class="btn btn__primary">Save Blog</button>
+      </div>
+      <div class="blog__hashtags">
+        <h1>Hashtags</h1>
+        <HashtagList hashtags={content.hashtags} />
+      </div>
+      <Toc tocs={tocs} />
+    </div>
+  </div>
+</BaseLayout>
+
+<style lang="scss">
+.blog-wrapper {
+  display: grid;
+  gap: 3rem;
+  grid-template-columns: 1fr;
+}
+
+.blog {
+  .article {
+    order: 2;
+  }
+
+  &__hashtags {
+    h1 {
+      font-size: 1.5rem;
+      margin-bottom: 1rem;
+      padding-bottom: .5rem;
+    }
+  }
+
+  &__cover {
+    margin-bottom: 2rem;
+  }
+
+  &__content {
+    :global(h2) {
+      font-weight: 600;
+      font-size: 1.75rem;
+      margin: 4rem 0 var(--default-padding) 0;
+      color: var(--primary-color);
+    }
+
+    :global(p) {
+      margin-bottom: var(--default-padding);
+      font-size: 1.1rem;
+      line-height: 1.75;
+    }
+
+    :global(pre) {
+      margin-bottom: var(--default-padding);
+      padding: var(--default-padding);
+      font-size: 1rem;
+      line-height: 1.5;
+      color: #c3cee3;
+      box-shadow: var(--shadow);
+      background: var(--bgv);
+      font-family: 'Fira Code', monospace;
+      border-radius: 2px;
+     
+      max-width: calc(100vw - (var(--default-padding) * 2));
+      overflow-x: auto;
+      
+      /* width */
+      &::-webkit-scrollbar {
+        height: 6px;
+      }
+
+      /* Track */
+      &::-webkit-scrollbar-track {
+        background: var(--primary-color); 
+      }
+
+      /* Handle */
+      &::-webkit-scrollbar-thumb {
+        background: var(--primary); 
+      }
+
+      /* Handle on hover */
+      &::-webkit-scrollbar-thumb:hover {
+        background: var(--primary-dark); 
+      }
+    }
+  }
+}
+
+.side-panel {
+  display: flex;
+  flex-direction: column;
+  gap: var(--default-padding);
+}
+
+.save-button-container {
+  button {
+    width: 100%;
+    font-size: 1.25rem;
+    padding: 1rem;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .blog-wrapper {
+    grid-template-columns: 1fr 300px;
+  }
+  
+  .blog {
+    order: 1;
+  }
+
+  .side-panel {
+    order: 2;
+  }
+}
+</style>
+

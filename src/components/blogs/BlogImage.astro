@@ -1,0 +1,9 @@
+---
+import { slugify } from '../../lib/helper';
+
+let { src, alt, title } = Astro.props;
+
+src = `/assets/blogs/${slugify(title)}/${src}`;
+---
+
+<img src={src} alt={alt}>

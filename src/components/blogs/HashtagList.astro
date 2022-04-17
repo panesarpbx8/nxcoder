@@ -1,0 +1,70 @@
+---
+const { hashtags } = Astro.props;
+---
+
+<div class="hashtags">
+  {hashtags.map(hashtag => (
+		<div class="hashtag">
+			<a class={hashtag} href={`/hashtags/${hashtag}`}>
+				{hashtag}
+			</a>
+		</div>
+  ))}
+</div>
+
+
+<style lang="scss">
+.hashtags {
+  display: flex;
+	flex-wrap: wrap;
+  gap: 1rem;
+  border-radius: 5px;
+}
+
+.hashtag {
+	margin-bottom: 1rem;
+  transition: transform 200ms ease-in-out;
+
+  &:hover {
+    transform: translateY(-4px);
+  }
+}
+
+a {
+	font-family: 'Inter', sans-serif;
+	background-color: var(--text);
+	color: var(--bgv);
+	padding: .5rem 1rem;
+	border-radius: 3px;
+}
+
+.angular, .nestjs {
+	color: white; 
+	background-color: #E83749; 
+}
+
+.node, .vue {
+	color: white; 
+	background-color: #12c273; 
+}
+
+.sass, .rxjs {
+	color: white;
+	background-color: #F06292; 
+}
+
+.javascript, .firebase {
+	color: hsl(215, 22%, 25%); 
+	background-color: #FCDC00;
+}
+
+.typescript, .css, .react, .docker {
+	color: white; 
+	background-color: #4183f5; 
+}
+
+.heroku {
+	color: white;
+	background-color: #7E57C2;
+}
+</style>
