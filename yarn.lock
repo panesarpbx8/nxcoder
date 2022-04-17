@@ -4765,6 +4765,13 @@ hosted-git-info@^4.0.1:
   dependencies:
     lru-cache "^6.0.0"
 
+hotroute@^0.0.7:
+  version "0.0.7"
+  resolved "https://registry.yarnpkg.com/hotroute/-/hotroute-0.0.7.tgz#019a69e44731f9a95fb66846d6d12d3b8a6a4f8d"
+  integrity sha512-u0AJvTuQR3uMyRkTYQDz2gj/0M/BwsJHYrcVxXPxOwTEV/117AjKrD5l22hqSE270Cp/wHv1pACMZ7YZyAeNmA==
+  dependencies:
+    quicklink "^1.0.0"
+
 hpack.js@^2.1.6:
   version "2.1.6"
   resolved "https://registry.yarnpkg.com/hpack.js/-/hpack.js-2.1.6.tgz#87774c0949e513f42e84575b3c45681fade2a0b2"
@@ -7481,6 +7488,11 @@ queue-microtask@^1.2.2:
   version "1.2.3"
   resolved "https://registry.npmjs.org/queue-microtask/-/queue-microtask-1.2.3.tgz"
   integrity sha512-NuaNSa6flKT5JaSYQzJok04JzTL1CA6aGhv5rfLW3PgqA+M2ChpZQnAC8h8i4ZFkBS8X5RqkDBHA7r4hej3K9A==
+
+quicklink@^1.0.0:
+  version "1.0.1"
+  resolved "https://registry.yarnpkg.com/quicklink/-/quicklink-1.0.1.tgz#7a3251a8ae71aa8a02c27d8c740b53a850e7721d"
+  integrity sha512-XeHOnjh9WZKVvVdkDraArYPAbDg4VWnlzscXNUcPMiJCk1aGFwE/JOFKqdnKaChWGnmYcnKCFCbep0t8U4KbOw==
 
 randombytes@^2.1.0:
   version "2.1.0"
