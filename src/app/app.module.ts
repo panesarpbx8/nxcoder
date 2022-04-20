@@ -11,8 +11,9 @@ import { getAuth, provideAuth } from '@angular/fire/auth';
 import { UserDataComponent } from './auth/user-data/user-data.component';
 import { LoginFormComponent } from './auth/login-form/login-form.component';
 import { AllowIfComponent } from './auth/allow-if/allow-if.component';
-import { ThemeSwitcherComponent } from './ui/theme-switcher/theme-switcher.component';
-import { SaveButtonComponent } from './ui/save-button/save-button.component';
+import { ThemeSwitcherComponent } from './theme-switcher/theme-switcher.component';
+import { SaveButtonComponent } from './save-button/save-button.component';
+import { HotrouteComponent } from './hotroute/hotroute.component';
 
 const elements: any[] = [
   [UserDataComponent, 'user-data'],
@@ -20,6 +21,7 @@ const elements: any[] = [
   [AllowIfComponent, 'allow-if'],
   [ThemeSwitcherComponent, 'theme-switcher'],
   [SaveButtonComponent, 'save-button'],
+  [HotrouteComponent], 'hot-route',
 ];
 
 @NgModule({
@@ -29,6 +31,7 @@ const elements: any[] = [
     AllowIfComponent,
     ThemeSwitcherComponent,
     SaveButtonComponent,
+    HotrouteComponent,
   ],
   imports: [
     BrowserModule,
