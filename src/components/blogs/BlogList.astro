@@ -13,9 +13,11 @@ const { blogs } = Astro.props as Props;
 <div class="blogs">
   {blogs.map(blog => (
     <div class="blog">
-      <a href={blog.url}>
-        <img src={`/assets${blog.url}/img/cover.png`} alt={blog.frontmatter.title}>
-      </a>
+      <div class="blog__cover">
+        <a href={blog.url}>
+          <img class="blog__cover__img" src={`/assets${blog.url}/img/cover.png`} alt={blog.frontmatter.title}>
+        </a>
+      </div>
       <div class="blog__wrapper">
         <div class="blog__title">
           { blog.frontmatter.title }
@@ -63,12 +65,10 @@ const { blogs } = Astro.props as Props;
 
   &__title {
     margin-bottom: 1rem;
-    text-transform: uppercase;
     color: var(--primary-color);
-    font-family: 'Baloo 2', sans-serif;
-    font-size: 1.5rem;
+    // font-family: 'Baloo Thambi 2', sans-serif;
+    font-size: 1.4rem;
     font-weight: 600;
-    line-height: 1.5rem;
   }
 
   &__headline {
