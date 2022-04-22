@@ -356,6 +356,13 @@
     svelte "^3.24.0"
     svelte2tsx "^0.5.5"
 
+"@astrojs/turbolinks@^0.1.1":
+  version "0.1.1"
+  resolved "https://registry.yarnpkg.com/@astrojs/turbolinks/-/turbolinks-0.1.1.tgz#3eef569080ae94f5b884e36c223dfe036a4c464e"
+  integrity sha512-OfHWOofYUgQUQOO4hBFg67Yt5ejEPR1e5fPche49NHCe5eDF8XoSPLBMykwkEhoTkTowhH9OZRefvzGd+t+Y+Q==
+  dependencies:
+    turbolinks "^5.2.0"
+
 "@astrojs/webapi@^0.11.1":
   version "0.11.1"
   resolved "https://registry.npmjs.org/@astrojs/webapi/-/webapi-0.11.1.tgz"
@@ -8657,6 +8664,11 @@ tsm@^2.1.4, tsm@^2.2.1:
   integrity sha512-qvJB0baPnxQJolZru11mRgGTdNlx17WqgJnle7eht3Vhb+VUR4/zFA5hFl6NqRe7m8BD9w/6yu0B2XciRrdoJA==
   dependencies:
     esbuild "^0.14.0"
+
+turbolinks@^5.2.0:
+  version "5.2.0"
+  resolved "https://registry.yarnpkg.com/turbolinks/-/turbolinks-5.2.0.tgz#e6877a55ea5c1cb3bb225f0a4ae303d6d32ff77c"
+  integrity sha512-pMiez3tyBo6uRHFNNZoYMmrES/IaGgMhQQM+VFF36keryjb5ms0XkVpmKHkfW/4Vy96qiGW3K9bz0tF5sK9bBw==
 
 type-fest@^0.13.1:
   version "0.13.1"

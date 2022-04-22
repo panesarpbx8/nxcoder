@@ -16,6 +16,7 @@
     "@angular/cli": "~13.2.6",
     "@angular/compiler-cli": "~13.2.0",
     "@astrojs/preact": "^0.1.1",
+    "@astrojs/turbolinks": "^0.1.1",
     "@types/node": "^12.11.1",
     "astro": "^1.0.0-beta.12",
     "concat": "^1.0.3",
