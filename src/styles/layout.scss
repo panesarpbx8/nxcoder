@@ -1,3 +1,27 @@
+.container {
+  max-width: var(--window-width);
+  margin: 0 auto;
+  padding: 0 1.5rem;
+}
+
+.route {
+  animation: routeIn 200ms ease-in-out;
+}
+
+@keyframes routeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-2rem);
+  }
+  50% {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  } 
+}
+
 .page-heading {
   font-family: 'Baloo Thambi 2', sans-serif;
   font-size: 2.5rem;
@@ -20,4 +44,12 @@
 
 .rounded {
   border-radius: 100%;
+}
+
+.sm { display: block; }
+.lg { display: none; }
+
+@media screen and (min-width: 768px) {
+  .sm { display: none; }
+  .lg { display: block; }
 }

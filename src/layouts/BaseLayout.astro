@@ -13,7 +13,7 @@ let image: string = Astro.props['image'] || '';
 	<BaseHead title={title} description={description} permalink={permalink} image={image}/>
 	<body>
 		<Navbar/>
-    <main class="container">
+    <main class="container route">
       <slot/>
     </main>
 		<Footer/>
