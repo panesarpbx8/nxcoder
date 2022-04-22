@@ -22,3 +22,4 @@ export interface Frontmatter {
   authorLink: string;
   slug: string;
 }
+

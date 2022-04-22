@@ -1,19 +1,26 @@
 ---
 import BaseLayout from '../../layouts/BaseLayout.astro';
 import BlogList from '../../components/blogs/BlogList.astro';
+import Pagination from '../../components/Pagination.astro';
 import { Blog } from '../../lib/blog';
 
 export async function getStaticPaths({ paginate }) {
   let blogs: Blog[] = await Astro.glob('./**/*.md');    
-  return paginate(blogs, { pageSize: 5 });
+  return paginate(blogs, { pageSize: 6 });
 }
 
-let blogs: Blog[] = await Astro.glob('./**/*.md');
-
 const { page } = Astro.props;
+
+let blogs: Blog[] = page.data;
+
+console.log(page);
+
 ---
 
 <BaseLayout>
   <h1 class="page-heading">Quick Blogs</h1>
   <BlogList blogs={blogs}></BlogList>
+
+  <Pagination page={page}></Pagination>
+
 </BaseLayout>

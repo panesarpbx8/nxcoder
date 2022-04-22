@@ -15,6 +15,11 @@ button {
   }
 }
 
+.btn.disabled {
+  opacity: .5;
+  pointer-events: none;
+}
+
 .btn:hover {
   cursor: pointer;
   background-color: var(--primary-dark);

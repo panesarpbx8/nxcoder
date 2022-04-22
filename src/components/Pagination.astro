@@ -1,0 +1,38 @@
+---
+interface Props {
+  page: {
+    start: number;
+    end: number;
+    size: number;
+    total: number;
+    currentPage: number;
+    lastPage: number;
+    url: { 
+      current: string; 
+      next: string;
+      prev: string 
+    };
+  }
+}
+
+const { page } = Astro.props as Props;
+
+const prev = page.url.prev;
+const next = page.url.next;
+
+---
+
+<div class="pagination force-center">
+  <a href={prev}>
+    <button class:list={['btn btn__primary', { disabled: prev ? false : true }]}>Prev</button>
+  </a>
+  <a href={next}>
+    <button class:list={['btn btn__primary', { disabled: next ? false : true }]}>Next</button>
+  </a>
+</div>
+
+<style lang="scss">
+.pagination {
+  gap: 1.5rem;
+}
+</style>
