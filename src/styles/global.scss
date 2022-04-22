@@ -6,27 +6,24 @@
   --primary-color: #128a9c;
   --primary-light: #128a9c25;
   --primary-dark: #0e7080;
+  --shadow: 0 5px 10px #59626b11;
   
   --bg: #f5f8fd;
   --bgv: #ffffff;
 	--text: #46566d;
 
 	--window-width: 1200px;
-  --default-padding: 1.5rem;
-
-  --shadow: 0 5px 10px #59626b11;
 }
 
 .dark {
   --primary-color: #50d7ea;
   --primary-light: #50d7ea25;
   --primary-dark: #49c7d8;
+  --shadow: 0 5px 10px #23272b50;
 
   --bg: #001E26;
   --bgv: #012A35;
 	--text: #e3edf2;
-  
-  --shadow: 0 5px 10px #23272b50;
 }
 
 .sm { display: block; }

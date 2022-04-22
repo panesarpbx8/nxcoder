@@ -21,8 +21,8 @@ export async function getStaticPaths() {
   });
 }
 
-const hashtag = Astro.params.hashtag;
-const blogs = Astro.props.blogs.filter(blog => {
+const hashtag = Astro.params['hashtag'];
+const blogs = Astro.props['blogs'].filter(blog => {
   return blog.frontmatter.hashtags.includes(hashtag);
 });
 ---

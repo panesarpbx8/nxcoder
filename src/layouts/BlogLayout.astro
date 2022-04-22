@@ -61,19 +61,19 @@ const slug = slugify(content.title);
     :global(h2) {
       font-weight: 600;
       font-size: 1.75rem;
-      margin: 4rem 0 var(--default-padding) 0;
+      margin: 4rem 0 1.5rem 0;
       color: var(--primary-color);
     }
 
     :global(p) {
-      margin-bottom: var(--default-padding);
+      margin-bottom: 1.5rem;
       font-size: 1.1rem;
       line-height: 1.75;
     }
 
     :global(pre) {
-      margin-bottom: var(--default-padding);
-      padding: var(--default-padding);
+      margin-bottom: 1.5rem;
+      padding: 1.5rem;
       font-size: 1rem;
       line-height: 1.5;
       color: #c3cee3;
@@ -82,7 +82,7 @@ const slug = slugify(content.title);
       font-family: 'Fira Code', monospace;
       border-radius: 2px;
      
-      max-width: calc(100vw - (var(--default-padding) * 2));
+      max-width: calc(100vw - (1.5rem * 2));
       overflow-x: auto;
       
       /* width */
@@ -111,7 +111,7 @@ const slug = slugify(content.title);
 .side-panel {
   display: flex;
   flex-direction: column;
-  gap: var(--default-padding);
+  gap: 1.5rem;
 }
 
 .save-button-container {
