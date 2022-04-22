@@ -8,7 +8,8 @@
     "build:astro": "astro build",
     "build:ng": "ng build && node src/build.ts",
     "build": "yarn build:ng && yarn build:astro",
-    "git": "git add . && git commit -m init"
+    "git": "git add . && git commit -m init",
+    "deploy": "yarn git && git push origin master"
   },
   "devDependencies": {
     "@angular-devkit/build-angular": "~13.2.6",
