@@ -24,10 +24,14 @@ const next = page.url.next;
 
 <div class="pagination force-center">
   <a href={prev}>
-    <button class:list={['btn btn__primary', { disabled: prev ? false : true }]}>Prev</button>
+    <button class:list={['btn btn__primary', { disabled: prev ? false : true }]}>
+      <i class="fa-solid fa-arrow-left"></i> Prev
+    </button>
   </a>
   <a href={next}>
-    <button class:list={['btn btn__primary', { disabled: next ? false : true }]}>Next</button>
+    <button class:list={['btn btn__primary', { disabled: next ? false : true }]}>
+      Next <i class="fa-solid fa-arrow-right"></i>
+    </button>
   </a>
 </div>
 
