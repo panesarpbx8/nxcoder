@@ -3,7 +3,7 @@ import BaseLayout from './BaseLayout.astro';
 import HashtagList from '../components/blogs/HashtagList.astro';
 import BlogHero from '../components/blogs/BlogHero.astro';
 import Toc from '../components/blogs/Toc.astro';
-import { slugify } from '../lib/helper';
+import { slugify } from '../util/helper';
 
 const { content } = Astro.props;
 
@@ -16,7 +16,7 @@ const slug = slugify(content.title);
   <div class="blog blog-wrapper">
     <div class="article"> 
       <div class="blog__cover">
-        <img src={`/assets/blogs/${slug}/img/cover.png`} alt={content.title}>
+        <img src={`/blogs/${slug}/img/cover.png`} alt={content.title}>
       </div> 
       <div class="blog__content"><slot></slot></div>
     </div>

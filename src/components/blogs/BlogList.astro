@@ -15,7 +15,7 @@ const { blogs } = Astro.props as Props;
     <div class="blog">
       <div class="blog__cover">
         <a href={blog.url}>
-          <img class="blog__cover__img" src={`/assets${blog.url}/img/cover.png`} alt={blog.frontmatter.title}>
+          <img class="blog__cover__img" src={`${blog.url}/img/cover.png`} alt={blog.frontmatter.title}>
         </a>
       </div>
       <div class="blog__wrapper">
