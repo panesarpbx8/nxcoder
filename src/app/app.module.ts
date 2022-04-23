@@ -49,16 +49,10 @@ const elements: any[] = [
   ],
 })
 export class AppModule { 
-  
-  constructor(private injector: Injector) {}
-
-  ngDoBootstrap() {
+  constructor(injector: Injector) {
     for (const [component, selector] of elements) {
-      const el = createCustomElement(component, { 
-        injector: this.injector 
-      });
-      customElements.define(selector, el);
+      const element = createCustomElement(component, { injector });
+      customElements.define(selector, element);
     }
   }
-
 }
