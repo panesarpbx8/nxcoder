@@ -20,10 +20,14 @@ const { blogs } = Astro.props as Props;
       </div>
       <div class="blog__wrapper">
         <div class="blog__title">
-          { blog.frontmatter.title }
+          <a href={blog.url}>
+            <span>{ blog.frontmatter.title }</span>
+          </a>
         </div>
         <div class="blog__headline">
-          { blog.frontmatter.headline }
+          <a href={blog.url}>
+            <span>{ blog.frontmatter.headline }</span>
+          </a>
         </div>
         <div class="blog__hashtags">
           <HashtagList hashtags={blog.frontmatter.hashtags}/>
@@ -72,9 +76,11 @@ const { blogs } = Astro.props as Props;
   }
 
   &__headline {
-    color: var(--text);
     font-size: 1.1rem;
     margin-bottom: 1.5rem;
+    span {
+      color: var(--text);
+    }
   }
 
   &__hashtags {

@@ -6,7 +6,7 @@ import { AuthService } from '../auth.service';
   template: `
     <div *ngIf="auth.user$ | async as user">
       <div *ngIf="field === 'photoURL'">
-        <img [src]="user.photoURL" [alt]="user.displayName">
+        <img class="user-image" [src]="user.photoURL" [alt]="user.displayName">
       </div>
       <div *ngIf="field === 'displayName'">
         <span>{{ user.displayName }}</span>
@@ -22,6 +22,14 @@ import { AuthService } from '../auth.service';
       </div>
     </div>
   `,
+  styles: [`
+    .user-image {
+      height: 30px;
+      width: 30px;
+      border-radius: 100%;
+      vertical-align: middle;
+    }
+  `],
   encapsulation: ViewEncapsulation.ShadowDom,
 })
 export class UserDataComponent {

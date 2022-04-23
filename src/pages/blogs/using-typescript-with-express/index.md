@@ -8,6 +8,8 @@ author: Sukhpreet Singh
 authorImage: https://lh3.googleusercontent.com/a-/AOh14Gh75b7CK1JPwLcKqE8a-zJjwaEVGUreGuWl2nYZbw=s96-c
 authorLink: https://panesarpbx8.vercel.app
 layout: ../../../layouts/BlogLayout.astro
+setup: |
+  import BlogImage from '../../../components/blogs/BlogImage.astro';
 ---
 
 ## Getting started
@@ -173,7 +175,7 @@ GET http://localhost:3000
 GET http://localhost:3000/bob-marley
 ```
 
-![testing typescript express api](img/test.png)
+<BlogImage src="img/test.png" alt="testing typescript express api" title={frontmatter.title} />
 
 ## Scripts
 
