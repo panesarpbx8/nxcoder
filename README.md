@@ -1,6 +1,6 @@
 # NXCODER
 
-Angular, Astro, Firebase & Vercel Functions 
+Angular, Astro, Firebase & Vercel
 
 (Under Construction)
 
@@ -13,3 +13,6 @@ TODO: saved blogs
 TODO: eliminate tsconfig.app.json
 
 TODO: eliminate src/environments
+
+TODO: Responsive Navbar.astro
+

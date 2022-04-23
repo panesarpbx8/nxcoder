@@ -2,7 +2,7 @@
 import BaseLayout from '../../layouts/BaseLayout.astro';
 import BlogList from '../../components/blogs/BlogList.astro';
 import Pagination from '../../components/Pagination.astro';
-import { Blog } from '../../lib/blog';
+import { Blog } from '../../util/blog';
 
 export async function getStaticPaths({ paginate }) {
   let blogs: Blog[] = await Astro.glob('./**/*.md');    
