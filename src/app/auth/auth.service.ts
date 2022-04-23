@@ -35,7 +35,7 @@ export class AuthService {
     );
   }
 
-  async signUp(data: SignUpData): Promise<void> {
+  async createAccount(data: SignUpData): Promise<void> {
     if (!data.displayName || !data.email || !data.password) {
       throw Error('Insufficient information');
     } 

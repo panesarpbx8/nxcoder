@@ -8,7 +8,7 @@ async function build() {
     './dist/nxcoder/runtime.js',
   ];
 
-	const dir = '../public/assets/js';
+	const dir = './public/assets/js';
 
 	await fs.ensureDir(dir);
 	await concat(files, `${dir}/elements.js`);

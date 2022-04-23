@@ -13,6 +13,8 @@ import { LoginFormComponent } from './auth/login-form/login-form.component';
 import { AllowIfComponent } from './auth/allow-if/allow-if.component';
 import { ThemeSwitcherComponent } from './theme-switcher/theme-switcher.component';
 import { SaveButtonComponent } from './save-button/save-button.component';
+import { FormsModule } from '@angular/forms';
+import { PlaceHolderComponent } from './place-holder/place-holder.component';
 
 const elements: any[] = [
   [UserDataComponent, 'user-data'],
@@ -20,6 +22,7 @@ const elements: any[] = [
   [AllowIfComponent, 'allow-if'],
   [ThemeSwitcherComponent, 'theme-switcher'],
   [SaveButtonComponent, 'save-button'],
+  [PlaceHolderComponent, 'place-holder']
 ];
 
 @NgModule({
@@ -29,9 +32,11 @@ const elements: any[] = [
     AllowIfComponent,
     ThemeSwitcherComponent,
     SaveButtonComponent,
+    PlaceHolderComponent,
   ],
   imports: [
     BrowserModule,
+    FormsModule,
     provideFirebaseApp(() => initializeApp(environment.firebase)),
     provideFirestore(() => getFirestore()),
     provideAuth(() => getAuth()),
