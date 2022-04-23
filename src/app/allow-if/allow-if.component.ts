@@ -1,7 +1,7 @@
 import { Component, Input, OnDestroy, OnInit, ViewEncapsulation } from "@angular/core";
 import { Subscription } from "rxjs";
 import { AuthService } from "../auth.service";
-import { User } from "../user.interface.interface";
+import { User } from "../user.interface";
 
 type Level = 'logged' | 'pro';
 
