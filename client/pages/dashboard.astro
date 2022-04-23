@@ -2,10 +2,38 @@
 import BaseLayout from '../layouts/BaseLayout.astro';
 ---
 
-<allow-if level="logged">
-  <BaseLayout>
+<BaseLayout>
+  <allow-if level="logged">
     <h1 class="page-heading">Hello <user-data field="displayName"></user-data></h1>
-  </BaseLayout>
-</allow-if>
+    <logout-button class="force-center"></logout-button>
 
+    <div slot="else">
+      <div class="error">
+        You need to be logged in!
+      </div>
+      <div class="login-options">
+        <a href="/login">
+          <button class="btn btn__primary">Login with email</button>
+        </a>
+        <google-button></google-button>
+      </div>
+    </div>
+  </allow-if>
+</BaseLayout>
 
+<style lang="scss">
+.error, .login-options {
+  max-width: 250px;
+  margin: auto;
+  margin-bottom: 2rem;
+}
+
+.login-options {
+  display: grid;
+  gap: 1rem;
+
+  button {
+    width: 100%;
+  }
+}
+</style>

@@ -15,6 +15,8 @@ import { ThemeSwitcherComponent } from './theme-switcher/theme-switcher.componen
 import { SaveButtonComponent } from './save-button/save-button.component';
 import { FormsModule } from '@angular/forms';
 import { PlaceHolderComponent } from './place-holder/place-holder.component';
+import { LogoutButtonComponent } from './logout-button/logout-button.component';
+import { GoogleButtonComponent } from './google-button/google-button.component';
 
 const elements: any[] = [
   [UserDataComponent, 'user-data'],
@@ -22,7 +24,9 @@ const elements: any[] = [
   [AllowIfComponent, 'allow-if'],
   [ThemeSwitcherComponent, 'theme-switcher'],
   [SaveButtonComponent, 'save-button'],
-  [PlaceHolderComponent, 'place-holder']
+  [PlaceHolderComponent, 'place-holder'],
+  [LogoutButtonComponent, 'logout-button'],
+  [GoogleButtonComponent, 'google-button'],
 ];
 
 @NgModule({
@@ -33,6 +37,8 @@ const elements: any[] = [
     ThemeSwitcherComponent,
     SaveButtonComponent,
     PlaceHolderComponent,
+    LogoutButtonComponent,
+    GoogleButtonComponent,
   ],
   imports: [
     BrowserModule,
