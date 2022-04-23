@@ -1,0 +1,8 @@
+{
+	"routes": [
+		{
+			"src": "/fetch-latest-blog",
+			"dest": "/serverless/fetch-latest-blog.js"
+		}
+	]
+}
