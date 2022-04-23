@@ -1,3 +1,3 @@
 # NXCODER
 
-Angular, Astro & Firebase
+Angular, Astro, Firebase & Vercel Functions 
