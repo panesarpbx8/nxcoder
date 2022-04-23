@@ -1,5 +1,6 @@
-const cheerio = require('cheerio');
-const fetch = require('node-fetch');
+import { VercelRequest, VercelResponse } from '@vercel/node';
+import * as cheerio from 'cheerio';
+import fetch from 'node-fetch';
 
 const allowCors = fn => async (req, res) => {
   res.setHeader('Access-Control-Allow-Credentials', true);
@@ -14,7 +15,7 @@ const allowCors = fn => async (req, res) => {
   return await fn(req, res);
 }
 
-const handler = async (request, response) => {
+const handler = async (request: VercelRequest, response: VercelResponse) => {
 	const url = 'https://nxcoder.vercel.app';
 
 	let res = await fetch(url);
