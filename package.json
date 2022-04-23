@@ -7,7 +7,7 @@
     "dev:elements": "ng serve",
     "build:astro": "astro build",
     "build:elements": "ng build && node src/build.ts",
-    "build": "yarn build:ng && yarn build:astro",
+    "build": "yarn build:elements && yarn build:astro",
     "git": "git add . && git commit -m init",
     "deploy": "yarn git && git push origin master"
   },
