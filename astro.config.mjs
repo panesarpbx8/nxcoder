@@ -5,6 +5,7 @@ import turbolinks from "@astrojs/turbolinks";
 export default defineConfig({
   integrations: [turbolinks()],
   markdown: {
-    syntaxHighlight: 'prism'
-  }
+    syntaxHighlight: 'prism',
+  },
+  srcDir: './astro'
 });

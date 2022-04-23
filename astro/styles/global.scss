@@ -1,47 +1,9 @@
+@import './variables.scss';
 @import './prism.scss';
 @import './layout.scss';
 @import './buttons.scss';
 @import './login.scss';
 @import './inputs.scss';
-
-:root {
-  --primary-color: #128a9c;
-  --primary-light: #128a9c1d;
-  --primary-dark: #0e7080;
-  
-	--green-color: hsl(137, 58%, 45%);
-	--green-hover: hsl(137, 58%, 42%);
-	--green-light: hsl(137, 58%, 45%, .1);
-
-	--red-color: hsl(354, 79%, 56%);
-	--red-hover: hsl(354, 79%, 44%);
-	--red-light: hsl(354, 79%, 56%, .1);
-  
-	--nav-link: #46566dd8;
-	--nav-link-hover: var(--primary);
-	--nav-icon: #46566d93;
-
-  --shadow: 0 5px 10px #59626b11;
-  
-  --bg: #f5f8fd;
-  --bgv: #ffffff;
-	--text: #46566d;
-  
-	--disabled-text-color: rgb(195, 206, 211);
-
-	--window-width: 1250px;
-}
-
-.dark {
-  --primary-color: #50d7ea;
-  --primary-light: #50d7ea25;
-  --primary-dark: #49c7d8;
-  --shadow: 0 5px 10px #23272b50;
-
-  --bg: #001E26;
-  --bgv: #012A35;
-	--text: #e3edf2;
-}
 
 :target::before {
   content: '';
@@ -74,7 +36,7 @@ h1, h2, h3, p {
   margin: 0;
 }
 
-button, img {
+button, img, .page-heading {
   user-select: none;
 }
 

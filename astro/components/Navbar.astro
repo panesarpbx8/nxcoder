@@ -24,16 +24,16 @@ const github: string = 'https://www.github.com/panesarpbx8/nxcoder';
       <a>
         <i class="fa-solid fa-magnifying-glass"></i>
       </a>
-      <div>
-        <allow-if level="logged">
+      <allow-if level="logged">
+        <a href="/dashboard">
           <user-data field="photoURL"></user-data>
-          <div slot="else">
-            <a href="/login">
-              <i class="fa-solid fa-user-astronaut"></i>
-            </a>
-          </div>
-        </allow-if>
-      </div>
+        </a>
+        <div slot="else">
+          <a href="/login">
+            <i class="fa-solid fa-user-astronaut"></i>
+          </a>
+        </div>
+      </allow-if>
     </div>
   </nav>
 </header>

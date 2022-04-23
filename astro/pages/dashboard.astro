@@ -1,0 +1,11 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+---
+
+<allow-if level="logged">
+  <BaseLayout>
+    <h1 class="page-heading">Hello <user-data field="displayName"></user-data></h1>
+  </BaseLayout>
+</allow-if>
+
+

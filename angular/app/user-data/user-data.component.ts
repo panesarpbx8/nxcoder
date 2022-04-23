@@ -4,23 +4,23 @@ import { AuthService } from '../auth.service';
 @Component({
   selector: 'app-user-data',
   template: `
-    <div *ngIf="auth.user$ | async as user">
-      <div *ngIf="field === 'photoURL'">
+    <span *ngIf="auth.user$ | async as user">
+      <span *ngIf="field === 'photoURL'">
         <img class="user-image" [src]="user.photoURL" [alt]="user.displayName">
-      </div>
-      <div *ngIf="field === 'displayName'">
+      </span>
+      <span *ngIf="field === 'displayName'">
         <span>{{ user.displayName }}</span>
-      </div>
-      <div *ngIf="field === 'email'">
+      </span>
+      <span *ngIf="field === 'email'">
         <span>{{ user.email }}</span>
-      </div>
-      <div *ngIf="field === 'isPro'">
+      </span>
+      <span *ngIf="field === 'isPro'">
         <span class="pro-badge">PRO</span>
-      </div>
-      <div *ngIf="field === 'shortName'">
+      </span>
+      <span *ngIf="field === 'shortName'">
         <span>{{ shortName(user.displayName) }}</span>
-      </div>
-    </div>
+      </span>
+    </span>
   `,
   styles: [`
     .user-image {

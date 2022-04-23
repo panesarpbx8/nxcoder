@@ -36,14 +36,14 @@
         }
       },
       "root": "",
-      "sourceRoot": "src",
+      "sourceRoot": "angular",
       "prefix": "app",
       "architect": {
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
-            "outputPath": "dist/nxcoder",
-            "index": "src/pages/index.astro",
+            "outputPath": "dist",
+            "index": "src/main.ts",
             "main": "src/main.ts",
             "polyfills": "src/polyfills.ts",
             "tsConfig": "tsconfig.app.json",

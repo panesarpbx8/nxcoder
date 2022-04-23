@@ -3,9 +3,9 @@ const concat = require('concat');
 
 async function build() {
   const files = [
-    './dist/nxcoder/main.js',
-    './dist/nxcoder/polyfills.js',
-    './dist/nxcoder/runtime.js',
+    './dist/main.js',
+    './dist/polyfills.js',
+    './dist/runtime.js',
   ];
 
 	const dir = './public/assets/js';
