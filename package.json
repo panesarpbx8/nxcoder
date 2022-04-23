@@ -6,7 +6,7 @@
     "dev:astro": "astro dev",
     "dev:elements": "ng serve",
     "build:astro": "astro build",
-    "build:elements": "ng build && node elements/build.ts",
+    "build:elements": "ng build && node src/build.ts",
     "build": "yarn build:elements && yarn build:astro",
     "git": "git add . && git commit -m init",
     "deploy": "yarn git && git push origin master"
@@ -17,6 +17,7 @@
     "@angular/compiler-cli": "~13.2.0",
     "@astrojs/turbolinks": "^0.1.1",
     "@types/node": "^12.11.1",
+    "@vercel/node": "^1.14.1",
     "astro": "^1.0.0-beta.12",
     "concat": "^1.0.3",
     "fs-extra": "^10.0.1",
@@ -34,10 +35,10 @@
     "@angular/platform-browser": "~13.2.0",
     "@angular/platform-browser-dynamic": "~13.2.0",
     "@angular/router": "~13.2.0",
-    "firebase": "^9.6.11",
-    "rxjs": "~7.5.0",
-    "node-fetch": "^3.2.3",
     "cheerio": "^1.0.0-rc.10",
+    "firebase": "^9.6.11",
+    "node-fetch": "^3.2.3",
+    "rxjs": "~7.5.0",
     "tslib": "^2.3.0",
     "zone.js": "~0.11.4"
   }
