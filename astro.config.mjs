@@ -7,5 +7,5 @@ export default defineConfig({
   markdown: {
     syntaxHighlight: 'prism',
   },
-  srcDir: './astro'
+  srcDir: './client'
 });
