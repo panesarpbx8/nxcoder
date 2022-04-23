@@ -1,21 +1,33 @@
 button {
-  user-select: none;
   border: none;
+  display: flex;
+  gap: .75rem;
+  align-items: center;
+  justify-content: center;
+  border-radius: 2px;
+  padding: .5rem 1.25rem;
+  font-size: 1rem;
+  transition: background-color 200ms ease;
+  cursor: pointer;
 }
 
 .btn {
-  display: flex;
-  gap: 1rem;
-  align-items: center;
-  justify-content: center;
-  padding: .5rem 1rem;
   color: var(--bg);
-  border-radius: 2px;
-  font-size: 1rem;
-  transition: background-color 200ms ease;
 
   &__primary {
     background-color: var(--primary-color);
+  }
+}
+
+.google-btn {
+  background-color: var(--bgv);
+  box-shadow: var(--shadow);
+  color: var(--text);
+  width: 100%;
+
+
+  &:hover {
+    background-color: var(--bgvvv);
   }
 }
 

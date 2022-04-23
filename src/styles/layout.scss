@@ -53,3 +53,55 @@
   .sm { display: none; }
   .lg { display: block; }
 }
+
+.place-holder {
+	color: transparent;
+	overflow: hidden;
+	
+  margin-top: 1.5rem;
+	margin-bottom: 1.5rem;	
+	animation: for-placeholder 750ms linear infinite forwards;
+	background: var(--bgv); // Fallback
+	background: linear-gradient(to right, var(--bgv) 2%, var(--bg) 18%, var(--bgv) 33%);
+	background-size: 1300px; // Animation Area
+}
+
+@keyframes for-placeholder {
+	0% { background-position: -650px 0; }
+	100% { background-position: 650px 0; }	
+}
+
+
+.info, .error, .success {
+	padding: .5rem .75rem;
+}
+
+.info {
+	background-color: var(--primary-light);
+	color: var(--primary-color);
+	border-left: 4px solid var(--primary-color);
+	&::selection {
+		background-color: var(--primary-color);
+		color: white;
+	}
+}
+
+.success {
+	background-color: var(--green-light);
+	color: var(--green-color);
+	border-left: 4px solid var(--green-color);
+	&::selection {
+		background-color: var(--green-color);
+		color: white;
+	}
+}
+
+.error {
+	background-color: var(--red-light);
+	color: var(--red-color);
+	border-left: 4px solid var(--red-color);
+	&::selection {
+		background-color: var(--red-color);
+		color: white;
+	}
+}

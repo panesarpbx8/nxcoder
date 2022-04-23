@@ -1,4 +1,4 @@
-import { ChangeDetectorRef, Component, OnInit } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { User } from '../user';
 import { Subscription } from 'rxjs';
 import { AuthService } from '../auth.service';
