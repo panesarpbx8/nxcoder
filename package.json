@@ -8,8 +8,8 @@
     "build:astro": "astro build",
     "build:elements": "ng build && node src/build.ts",
     "build": "yarn build:elements && yarn build:astro",
-    "git": "git add . && git commit -m init",
-    "deploy": "yarn git && git push origin master"
+    "push": "git push origin master",
+    "pull": "git pull https://github.com/panesar/nxcoder.git"
   },
   "devDependencies": {
     "@angular-devkit/build-angular": "~13.2.6",
