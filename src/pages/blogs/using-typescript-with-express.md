@@ -175,7 +175,7 @@ GET http://localhost:3000
 GET http://localhost:3000/bob-marley
 ```
 
-<BlogImage src="img/test.png" alt="testing typescript express api" title={frontmatter.title} />
+<BlogImage src="test.png" alt="testing typescript express api" title={frontmatter.title} />
 
 ## Scripts
 

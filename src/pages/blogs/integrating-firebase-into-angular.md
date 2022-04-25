@@ -24,11 +24,11 @@ $ ng new ngx-firestarter --routing --style=scss
 
 Create a new firebase project from their [console](https://console.firebase.google.com) and do as follow.
 
-<BlogImage src="img/firebase.gif" alt="Creating firebase project" title={frontmatter.title} />
+<BlogImage src="firebase.gif" alt="Creating firebase project" title={frontmatter.title} />
 
 After creating firebase project, register a new web app and copy the firebase config.
 
-<BlogImage src="img/webapp.gif" alt="Creating new web app" title={frontmatter.title} />
+<BlogImage src="webapp.gif" alt="Creating new web app" title={frontmatter.title} />
 
 ## Installing firebase
 
