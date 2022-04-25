@@ -1,12 +1,16 @@
 ---
+import { Blog, sortByDate } from '../util/blog';
 import BaseLayout from './BaseLayout.astro';
 import HashtagList from '../components/blogs/HashtagList.astro';
+import LatestBlogs from '../components/blogs/LatestBlogs.astro';
 import BlogHero from '../components/blogs/BlogHero.astro';
 import Toc from '../components/blogs/Toc.astro';
 import { slugify } from '../util/helper';
 
+const blogs: Blog[] = await Astro.glob('../pages/blogs/*.md');
 const { content } = Astro.props;
 
+const latestBlog = sortByDate(blogs)[0]; 
 const tocs = content.astro.headers;
 const slug = slugify(content.title);
 ---
@@ -22,6 +26,10 @@ const slug = slugify(content.title);
     </div>
     <div class="side-panel">
       <save-button slug={slug}></save-button>
+      <div class="blog__latest">
+        <h1>Latest Blog</h1>
+        <LatestBlogs count={1}></LatestBlogs>
+      </div>  
       <div class="blog__hashtags">
         <h1>Hashtags</h1>
         <HashtagList hashtags={content.hashtags} />
@@ -43,7 +51,7 @@ const slug = slugify(content.title);
     order: 2;
   }
 
-  &__hashtags {
+  &__hashtags, &__latest {
     h1 {
       font-size: 1.5rem;
       margin-bottom: 1rem;

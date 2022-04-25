@@ -22,3 +22,8 @@ export interface Frontmatter {
   slug: string;
 }
 
+export function sortByDate(blogs: Blog[]): Blog[] {
+  return blogs.sort((a, b) => {
+    return new Date(b.frontmatter.createdAt).getTime() - new Date(a.frontmatter.createdAt).getTime();
+  });
+}

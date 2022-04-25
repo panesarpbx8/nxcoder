@@ -2,14 +2,12 @@
 import BaseLayout from '../../layouts/BaseLayout.astro';
 import BlogList from '../../components/blogs/BlogList.astro';
 import Pagination from '../../components/Pagination.astro';
-import { Blog } from '../../util/blog';
+import { Blog, sortByDate } from '../../util/blog';
 
 export async function getStaticPaths({ paginate }) {
   let blogs: Blog[] = await Astro.glob('./*.md');
 
-  blogs = blogs.sort((a, b) => {
-    return new Date(b.frontmatter.createdAt).getTime() - new Date(a.frontmatter.createdAt).getTime();
-  });
+  blogs = sortByDate(blogs);
 
   return paginate(blogs, { pageSize: 6 });
 }
