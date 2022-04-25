@@ -1,9 +1,8 @@
 import { Injectable } from '@angular/core';
 import { Auth, authState, signInWithEmailAndPassword, signInWithPopup, signOut, updateProfile } from '@angular/fire/auth';
-import { docData, Firestore, setDoc } from '@angular/fire/firestore';
+import { docData, Firestore, setDoc, doc } from '@angular/fire/firestore';
 import { createUserWithEmailAndPassword, GoogleAuthProvider, User as FirebaseUser } from 'firebase/auth';
-import { doc } from 'firebase/firestore';
-import { map, Observable, of, switchMap } from 'rxjs';
+import { firstValueFrom, map, Observable, of, switchMap } from 'rxjs';
 import { LoginData, SignUpData, User, UserData } from './user.interface';
 
 @Injectable({ providedIn: 'root' })
@@ -57,7 +56,14 @@ export class AuthService {
       new GoogleAuthProvider()
     );
 
-    await this.updateUserDoc(credentials.user);
+    const exists = firstValueFrom(
+      docData(doc(this.firestore, `users/${credentials.user.uid}`))
+    );
+
+    if (!exists) {
+      await this.updateUserDoc(credentials.user);
+    }
+
     // await this.router.navigateByUrl('/profile');
   }
 
@@ -74,6 +80,9 @@ export class AuthService {
   }
 
   async updateUserDoc(user: User | FirebaseUser, data?: UserData): Promise<void> {
+    console.log('DATA', data);
+    console.log('USER', user);
+    
     const payload: User = {
 			displayName: user.displayName,
 			email: user.email,
@@ -84,11 +93,14 @@ export class AuthService {
     }
 
     if (data && data.saved) payload.saved = data.saved;
+
+    console.log(payload);
+    
     
     await setDoc(
       doc(this.firestore, `users/${user.uid}`), 
-      { ...payload }, 
-      { merge: true },
+      payload, 
+      { merge: true }
     );
   }
 
