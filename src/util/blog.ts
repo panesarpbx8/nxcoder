@@ -14,7 +14,6 @@ export interface Frontmatter {
   title: string;
   headline: string;
   hashtags: string[];
-  date: string;
   createdAt: string;
   source: string;
   author: string;
