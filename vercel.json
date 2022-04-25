@@ -1,8 +1,0 @@
-{
-	"routes": [
-		{
-			"src": "/api/fetch-latest",
-			"dest": "/api/fetch-latest.ts"
-		}
-	]
-}

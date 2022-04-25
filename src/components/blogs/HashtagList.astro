@@ -1,14 +1,14 @@
 ---
-const { hashtags } = Astro.props;
+const { hashtags, heading } = Astro.props;
 ---
 
 <div class="hashtags">
   {hashtags.map(hashtag => (
-		<div class="hashtag">
-			<a class={hashtag} href={`/hashtags/${hashtag}`}>
+		<a href={`/hashtags/${hashtag}`}>
+			<button class={`hashtag ${heading} ${hashtag}`}>
 				{hashtag}
-			</a>
-		</div>
+			</button>
+		</a>
   ))}
 </div>
 
@@ -22,20 +22,18 @@ const { hashtags } = Astro.props;
 }
 
 .hashtag {
-	margin-bottom: 1rem;
   transition: transform 200ms ease-in-out;
+	background-color: var(--text);
+	color: var(--bgv);
 
   &:hover {
     transform: translateY(-3px);
   }
 }
 
-a {
-	font-family: 'Inter', sans-serif;
-	background-color: var(--text);
-	color: var(--bgv);
-	padding: .5rem 1rem;
-	border-radius: 3px;
+.hashtag.heading {
+	font-size: 3rem;
+	text-transform: capitalize;
 }
 
 .angular, .nestjs {

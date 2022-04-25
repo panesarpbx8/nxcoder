@@ -14,7 +14,7 @@ button {
 }
 
 .btn {
-  background-color: var(--bg);
+  background-color: var(--bgv);
   color: var(--text);
 
   &__primary {
@@ -45,8 +45,9 @@ button {
     &__outlined {
       box-shadow: none;
       border: .1rem solid var(--red-color);
+      background-color: var(--bg);
       color: var(--red-color);
-
+      
       &:hover {
         background-color: var(--red-color);
         color: var(--bg);
