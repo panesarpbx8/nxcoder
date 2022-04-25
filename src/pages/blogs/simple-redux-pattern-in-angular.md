@@ -9,7 +9,8 @@ authorImage: https://lh3.googleusercontent.com/a-/AOh14Gh75b7CK1JPwLcKqE8a-zJjwa
 authorLink: https://panesarpbx8.vercel.app
 layout: ../../../layouts/BlogLayout.astro
 setup: |
-  import BlogImage from '../../../components/blogs/BlogImage.astro';
+  import Layout from '../../layouts/BlogLayout.astro';
+  import BlogImage from '../../components/blogs/BlogImage.astro';
 ---
 
 ## Getting started

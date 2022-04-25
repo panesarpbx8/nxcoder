@@ -7,7 +7,8 @@ source: https://github.com/panesarpbx8
 author: Sukhpreet Singh
 authorImage: https://lh3.googleusercontent.com/a-/AOh14Gh75b7CK1JPwLcKqE8a-zJjwaEVGUreGuWl2nYZbw=s96-c
 authorLink: https://github.com/panesarpbx8
-layout: ../../../layouts/BlogLayout.astro
+setup: |
+  import Layout from '../../layouts/BlogLayout.astro';
 ---
 
 ## Getting started

@@ -7,7 +7,8 @@ source: https://github.com/panesarpbx8/express-typescript-setup
 author: Sukhpreet Singh
 authorImage: https://lh3.googleusercontent.com/a-/AOh14Gh75b7CK1JPwLcKqE8a-zJjwaEVGUreGuWl2nYZbw=s96-c
 authorLink: https://panesarpbx8.vercel.app
-layout: ../../../layouts/BlogLayout.astro
+setup: |
+  import Layout from '../../layouts/BlogLayout.astro';
 ---
 
 ## Create new project

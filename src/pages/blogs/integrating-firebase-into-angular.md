@@ -7,9 +7,9 @@ source: https://github.com/panesarpbx8/ngx-firestarter
 author: Sukhpreet Singh
 authorImage: https://lh3.googleusercontent.com/a-/AOh14Gh75b7CK1JPwLcKqE8a-zJjwaEVGUreGuWl2nYZbw=s96-c
 authorLink: https://panesarpbx8.vercel.app
-layout: ../../../layouts/BlogLayout.astro
 setup: |
-  import BlogImage from '../../../components/blogs/BlogImage.astro';
+  import BlogImage from '../../components/blogs/BlogImage.astro';
+  import Layout from '../../layouts/BlogLayout.astro';
 ---
 
 ## Getting started

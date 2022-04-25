@@ -7,7 +7,8 @@ source: https://gist.github.com/panesarpbx8/1c931316cdb4cc266487d5e10ca6f134
 author: Sukhpreet Singh
 authorImage: https://lh3.googleusercontent.com/a-/AOh14Gh75b7CK1JPwLcKqE8a-zJjwaEVGUreGuWl2nYZbw=s96-c
 authorLink: https://panesarpbx8.vercel.app
-layout: ../../../layouts/BlogLayout.astro
+setup: |
+  import Layout from '../../layouts/BlogLayout.astro';
 ---
 
 ## Dockerfile
