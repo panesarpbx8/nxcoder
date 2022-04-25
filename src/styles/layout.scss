@@ -8,18 +8,8 @@
   animation: routeIn 200ms ease-in-out;
 }
 
-@keyframes routeIn {
-  from {
-    opacity: 0;
-    transform: translateY(-2rem);
-  }
-  50% {
-    opacity: 0;
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  } 
+.rotate {
+  animation: rotation 2s infinite linear;
 }
 
 .page-heading {
@@ -66,12 +56,6 @@
 	background-size: 1300px; // Animation Area
 }
 
-@keyframes for-placeholder {
-	0% { background-position: -650px 0; }
-	100% { background-position: 650px 0; }	
-}
-
-
 .info, .error, .success {
 	padding: .5rem .75rem;
 }
@@ -104,4 +88,36 @@
 		background-color: var(--red-color);
 		color: white;
 	}
+}
+
+
+
+/// Keyframes ///
+
+@keyframes for-placeholder {
+	0% { background-position: -650px 0; }
+	100% { background-position: 650px 0; }	
+}
+
+@keyframes routeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-2rem);
+  }
+  50% {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  } 
+}
+
+@keyframes rotation {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(359deg);
+  }
 }

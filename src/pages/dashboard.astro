@@ -6,6 +6,7 @@ import BaseLayout from '../layouts/BaseLayout.astro';
   <allow-if level="logged">
     <h1 class="page-heading">Hello <user-data field="displayName"></user-data></h1>
     <logout-button class="force-center"></logout-button>
+    <user-json></user-json>
 
     <div slot="else">
       <div class="error">

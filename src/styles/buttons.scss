@@ -5,6 +5,7 @@ button {
   align-items: center;
   justify-content: center;
   border-radius: 2px;
+  border: .1rem solid transparent;
   padding: .5rem 1.25rem;
   font-size: 1rem;
   transition: background-color 200ms ease;
@@ -13,31 +14,66 @@ button {
 }
 
 .btn {
-  color: var(--bg);
+  background-color: var(--bg);
+  color: var(--text);
 
   &__primary {
     background-color: var(--primary-color);
+    color: var(--bg);
+  }
+  
+  &__green {
+    background-color: var(--green-color);
+    color: var(--bg);
+
+    &__outlined {
+      box-shadow: none;
+      background-color: var(--green-light);
+      color: var(--green-color);
+      border: .1rem solid var(--green-color);
+
+      &:hover {
+        background-color: var(--green-color);
+        color: var(--bg);
+      }
+    }
+  }
+  
+  &__red {
+    background-color: var(--red-color);
+
+    &__outlined {
+      box-shadow: none;
+      border: .1rem solid var(--red-color);
+      color: var(--red-color);
+
+      &:hover {
+        background-color: var(--red-color);
+        color: var(--bg);
+      }
+    }
   }
 }
 
 .google-btn {
   background-color: var(--bgv);
-  box-shadow: var(--shadow);
   color: var(--text);
+  box-shadow: var(--shadow);
   width: 100%;
 
 
   &:hover {
-    background-color: var(--bgvvv);
+    background-color: var(--bgv);
   }
+}
+
+.save-btn {
+  width: 100%;
+  font-size: 1.25rem;
+  padding: 1rem;
 }
 
 .btn.disabled {
   opacity: .5;
   pointer-events: none;
-}
-
-.btn:hover {
-  cursor: pointer;
-  background-color: var(--primary-dark);
 }

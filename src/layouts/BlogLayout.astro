@@ -21,9 +21,7 @@ const slug = slugify(content.title);
       <div class="blog__content"><slot></slot></div>
     </div>
     <div class="side-panel">
-      <div class="save-button-container">
-        <button class="btn btn__primary">Save Blog</button>
-      </div>
+      <save-button slug={slug}></save-button>
       <div class="blog__hashtags">
         <h1>Hashtags</h1>
         <HashtagList hashtags={content.hashtags} />
@@ -112,14 +110,6 @@ const slug = slugify(content.title);
   display: flex;
   flex-direction: column;
   gap: 1.5rem;
-}
-
-.save-button-container {
-  button {
-    width: 100%;
-    font-size: 1.25rem;
-    padding: 1rem;
-  }
 }
 
 @media screen and (min-width: 768px) {
