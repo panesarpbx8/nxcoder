@@ -9,7 +9,7 @@
     "build:elements": "ng build && node src/build.ts",
     "build": "yarn build:elements && yarn build:astro",
     "push": "git push origin master",
-    "pull": "git pull https://github.com/panesar/nxcoder.git"
+    "pull": "git pull https://github.com/panesarpbx8/nxcoder.git"
   },
   "devDependencies": {
     "@angular-devkit/build-angular": "~13.2.6",
