@@ -16,35 +16,40 @@ const allowCors = fn => async (req, res) => {
 }
 
 const handler = async (request: VercelRequest, response: VercelResponse) => {
-	const url = 'https://nxcoder.vercel.app';
 
-	let res = await fetch(url);
-	let html = await res.text();
-	
-	let $ = cheerio.load(html);
+  const baseUrl = `https://nxcoder.vercel.app`;
 
-	const latestBlogLink = $('.blog__block__info > a').attr('href');
+  let url = `${baseUrl}/blogs`;
 
-	res = await fetch(latestBlogLink);
-	html = await res.text();
+  let res = await fetch(url);
+  let html = await res.text();
 
-	$ = cheerio.load(html);
+  let $ = cheerio.load(html);
+  let blogContainer = $('.blogs > .blog')[0];
 
-	const getMetatag = (name) =>  
-		$(`meta[property="og:${name}"]`).attr('content') ||  
-		$(`meta[name="twitter:${name}"]`).attr('content') ||
-		$(`meta[name=${name}]`).attr('content');
+  let s = cheerio.load(blogContainer);
+  let href = s('.blog__cover > a').attr('href');
 
-	const data = {
-		url: latestBlogLink,
-		title: getMetatag('title'),
-		description: getMetatag('description'),
-		image: getMetatag('image'),
-		author: getMetatag('author'),
-		authorLink: getMetatag('author-link'),
-		authorImage: getMetatag('author-image'),
-	}
+  let res2 = await fetch(baseUrl + href);
+  let html2 = await res2.text();
 
+  let $$ = cheerio.load(html2);
+  
+  const getMetatag = (name) =>  
+    $$(`meta[property="og:${name}"]`).attr('content') ||  
+    $$(`meta[name="twitter:${name}"]`).attr('content') ||
+    $$(`meta[name=${name}]`).attr('content');
+  
+  const data = {
+    url: getMetatag('url'),
+    title: getMetatag('title'),
+    description: getMetatag('description'),
+    image: getMetatag('image'),
+    author: getMetatag('author'),
+    authorLink: getMetatag('author-link'),
+    authorImage: getMetatag('author-image'),
+  }
+  
 	response.json(data);
 }
 
