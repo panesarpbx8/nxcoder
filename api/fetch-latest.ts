@@ -53,4 +53,4 @@ const handler = async (request: VercelRequest, response: VercelResponse) => {
 	response.json(data);
 }
 
-module.exports = allowCors(handler);
+export default allowCors(handler);
