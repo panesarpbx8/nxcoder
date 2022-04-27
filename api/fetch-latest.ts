@@ -1,8 +1,7 @@
 import { VercelRequest, VercelResponse } from '@vercel/node';
 import * as cheerio from 'cheerio';
-import { RequestInfo, RequestInit } from 'node-fetch';
 
-const fetch = (url: RequestInfo, init?: RequestInit) =>  import('node-fetch').then(({ default: fetch }) => fetch(url, init));
+const fetch = (...args) => import('node-fetch').then(({default: fetch}) => fetch(...args));
 
 const allowCors = fn => async (req, res) => {
   res.setHeader('Access-Control-Allow-Credentials', true);
