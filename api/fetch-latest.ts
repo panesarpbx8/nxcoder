@@ -55,4 +55,4 @@ const handler = async (request: VercelRequest, response: VercelResponse) => {
 	response.json(data);
 }
 
-module.exports = allowCors(handler);
+module.exports = handler;
