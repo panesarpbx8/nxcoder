@@ -7,12 +7,14 @@ import Toc from '../components/blogs/Toc.astro';
 import { slugify } from '../util/helper';
 
 const { content } = Astro.props;
-
 const tocs = content.astro.headers;
 const slug = slugify(content.title);
 ---
 
-<BaseLayout title={content.title} description={content.headline}>
+<BaseLayout title={content.title} 
+  description={content.headline} 
+  url={`/blogs/${slug}`} 
+  image={`/blogs/${slug}/cover.png`}>
 
   <meta name="author" content={content.author}>
   <meta name="author-image" content={content.authorImage}>

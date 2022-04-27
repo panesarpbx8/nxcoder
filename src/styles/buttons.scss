@@ -20,6 +20,10 @@ button {
   &__primary {
     background-color: var(--primary-color);
     color: var(--bg);
+
+    &:hover {
+      opacity: .9;
+    }
   }
   
   &__green {

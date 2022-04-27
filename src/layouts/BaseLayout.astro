@@ -5,12 +5,12 @@ import Footer from '../components/Footer.astro';
 
 let title: string = Astro.props['title'] || 'nxcoder';
 let description: string = Astro.props['description'] || 'Next generation coding tutorials';
-let permalink: string = Astro.props['permalink'] || 'https://nxcoder.vercel.app/';
+let url: string = Astro.props['url'] || 'https://nxcoder.vercel.app/';
 let image: string = Astro.props['image'] || '';
 ---
 
 <html lang="en">
-	<BaseHead title={title} description={description} permalink={permalink} image={image}/>
+	<BaseHead title={title} description={description} url={url} image={image}/>
 	<body>
 		<Navbar/>
     <main class="container route">
