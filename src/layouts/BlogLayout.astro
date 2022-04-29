@@ -30,14 +30,14 @@ const slug = slugify(content.title);
     </div>
     <div class="side-panel">
       <save-button slug={slug}></save-button>
-      <div class="blog__latest">
-        <h1>Latest Blog</h1>
-        <LatestBlogs count={1}></LatestBlogs>
-      </div>  
       <div class="blog__hashtags">
         <h1>Hashtags</h1>
         <HashtagList hashtags={content.hashtags} />
       </div>
+      <div class="blog__latest">
+        <h1>Latest Blog</h1>
+        <LatestBlogs count={1}></LatestBlogs>
+      </div>  
       <Toc tocs={tocs} />
     </div>
   </div>

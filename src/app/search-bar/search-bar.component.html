@@ -1,0 +1,11 @@
+<div class="search">
+  <input type="text" 
+    name="search" 
+    class="search__field" 
+    placeholder="search..."
+    #field>
+
+  <div *ngIf="searchedBlogs$ | async as searchedBlogs" class="search__results">
+    <pre>{{ searchedBlogs | json }} </pre> 
+  </div>
+</div>

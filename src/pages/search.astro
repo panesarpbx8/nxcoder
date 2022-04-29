@@ -1,0 +1,14 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+
+const blogs: string = JSON.stringify(await Astro.glob('./blogs/*.md'));
+
+---
+
+<BaseLayout title="search">
+  <h1 class="page-heading">Search Blogs</h1>
+
+  <search-bar blogs={blogs}>
+    
+  </search-bar>
+</BaseLayout>
