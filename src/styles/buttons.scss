@@ -8,7 +8,7 @@ button {
   border: .1rem solid transparent;
   padding: .5rem 1.25rem;
   font-size: 1rem;
-  transition: background-color 200ms ease;
+  transition: background-color 200ms ease, transform 200ms ease-in-out;
   cursor: pointer;
   box-shadow: var(--shadow);
 }
@@ -16,6 +16,10 @@ button {
 .btn {
   background-color: var(--bgv);
   color: var(--text);
+
+  &__color-primary {
+    color: var(--primary-color);
+  }
 
   &__primary {
     background-color: var(--primary-color);
@@ -66,9 +70,9 @@ button {
   box-shadow: var(--shadow);
   width: 100%;
 
-
   &:hover {
     background-color: var(--bgv);
+    border: .1rem solid var(--primary-color);
   }
 }
 

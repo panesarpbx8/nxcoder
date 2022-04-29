@@ -21,8 +21,6 @@ export class SearchBarComponent implements OnInit, AfterViewInit {
 
   ngOnInit(): void {
     this._blogs = JSON.parse(this.blogs);
-    
-    console.log('blogs', this._blogs);
   }
 
   ngAfterViewInit(): void {
