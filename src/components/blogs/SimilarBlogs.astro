@@ -1,0 +1,18 @@
+---
+import BlogList from './BlogList.astro';
+import { Blog } from '../../util/blog';
+
+const blogs: Blog[] = await Astro.glob('../../pages/blogs/*.md');
+const { hashtags } = Astro.props;
+
+const similarBlogs = blogs.filter(blog => {
+  for (const hashtag of hashtags) {
+    return blog.frontmatter.hashtags.includes(hashtag);
+  }
+  return false;
+}).splice(0, 3);
+---
+
+<BlogList blogs={similarBlogs}></BlogList>
+
+

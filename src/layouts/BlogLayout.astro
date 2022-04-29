@@ -2,6 +2,7 @@
 import BaseLayout from './BaseLayout.astro';
 import HashtagList from '../components/blogs/HashtagList.astro';
 import LatestBlogs from '../components/blogs/LatestBlogs.astro';
+import SimilarBlogs from '../components/blogs/SimilarBlogs.astro';
 import BlogHero from '../components/blogs/BlogHero.astro';
 import Toc from '../components/blogs/Toc.astro';
 import { slugify } from '../util/helper';
@@ -41,6 +42,10 @@ const slug = slugify(content.title);
       <Toc tocs={tocs} />
     </div>
   </div>
+  <div class="similar-blogs">
+    <h1>Similar to <span>{content.title}</span></h1>
+    <SimilarBlogs hashtags={content.hashtags}/>
+  </div>
 </BaseLayout>
 
 <style lang="scss">
@@ -51,6 +56,8 @@ const slug = slugify(content.title);
 }
 
 .blog {
+  margin-bottom: 6rem;
+
   .article {
     order: 2;
   }
@@ -122,6 +129,17 @@ const slug = slugify(content.title);
   display: flex;
   flex-direction: column;
   gap: 1.5rem;
+}
+
+.similar-blogs {
+  h1 {
+    text-align: center;
+    margin-bottom: 3rem;
+
+    span {
+      font-weight: 500;
+    }
+  }
 }
 
 @media screen and (min-width: 768px) {
