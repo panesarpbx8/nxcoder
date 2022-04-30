@@ -42,10 +42,7 @@ const slug = slugify(content.title);
       <Toc tocs={tocs} />
     </div>
   </div>
-  <div class="similar-blogs">
-    <h1>Similar to <span>{content.title}</span></h1>
-    <SimilarBlogs hashtags={content.hashtags}/>
-  </div>
+  <SimilarBlogs hashtags={content.hashtags}/>
 </BaseLayout>
 
 <style lang="scss">
@@ -129,17 +126,6 @@ const slug = slugify(content.title);
   display: flex;
   flex-direction: column;
   gap: 1.5rem;
-}
-
-.similar-blogs {
-  h1 {
-    text-align: center;
-    margin-bottom: 3rem;
-
-    span {
-      font-weight: 500;
-    }
-  }
 }
 
 @media screen and (min-width: 768px) {

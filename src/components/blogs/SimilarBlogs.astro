@@ -1,18 +1,37 @@
 ---
 import BlogList from './BlogList.astro';
 import { Blog } from '../../util/blog';
+import { slugify } from '../../util/helper';
 
 const blogs: Blog[] = await Astro.glob('../../pages/blogs/*.md');
 const { hashtags } = Astro.props;
+
+const currentBlogSlug = Astro.canonicalURL.pathname.replace('/blogs/', '').replace('/', '');
+const currentBlog = blogs.map(blog => {
+  blog.frontmatter.slug = slugify(blog.frontmatter.title);
+  return blog;
+}).filter(blog => blog.frontmatter.slug === currentBlogSlug)[0];
 
 const similarBlogs = blogs.filter(blog => {
   for (const hashtag of hashtags) {
     return blog.frontmatter.hashtags.includes(hashtag);
   }
   return false;
-}).splice(0, 3);
+}).filter(blog => blog.frontmatter.title !== currentBlog.frontmatter.title)
+  .splice(0, 3);
 ---
 
+{similarBlogs.length > 0 && <h1>Similar to <span>{currentBlog.frontmatter.title}</span></h1>}
 <BlogList blogs={similarBlogs}></BlogList>
 
+<style lang="scss">
+h1 {
+  text-align: center;
+  margin-bottom: 3rem;
+
+  span {
+    font-weight: 500;
+  }
+}
+</style>
 
