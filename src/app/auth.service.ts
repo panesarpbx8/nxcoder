@@ -47,7 +47,7 @@ export class AuthService {
 
     await updateProfile(credentials.user, { displayName: data.displayName });
     await this.updateUserDoc(credentials.user);
-    // await this.router.navigateByUrl('/profile');
+    location.pathname = '/dashboard';
   }
 
   async loginWithGoogle(): Promise<void> {
@@ -64,7 +64,7 @@ export class AuthService {
       await this.updateUserDoc(credentials.user);
     }
 
-    // await this.router.navigateByUrl('/profile');
+    history.back();
   }
 
   async login(data: LoginData): Promise<void> {
@@ -76,7 +76,8 @@ export class AuthService {
       data.email, 
       data.password
     );
-    // await this.router.navigateByUrl('/');
+
+    history.back();
   }
 
   async updateUserDoc(user: User | FirebaseUser, data?: UserData): Promise<void> {
@@ -105,8 +106,8 @@ export class AuthService {
   }
 
   async logout(): Promise<void> {
-    await signOut(this.auth);    
-    // await this.router.navigateByUrl('/');
+    await signOut(this.auth);
+    location.pathname = '/';
   }
 
 }

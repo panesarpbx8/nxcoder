@@ -24,7 +24,7 @@ const { blog } = Astro.props;
   padding: 1rem 0 4rem 0;
   
   &__title {
-    font-size: 3.5rem;
+    font-size: 2rem;
     line-height: 1;
     margin-bottom: 2rem;
     text-align: center;
@@ -58,6 +58,10 @@ const { blog } = Astro.props;
 
 @media screen and (min-width: 768px) {
   .blog-hero {
+    &__title {
+      font-size: 3.5rem;
+    }
+
     &__matter {
       flex-direction: row;
     }

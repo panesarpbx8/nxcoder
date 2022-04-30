@@ -14,7 +14,7 @@
 
 .page-heading {
   font-family: 'Baloo Thambi 2', sans-serif;
-  font-size: 2.5rem;
+  font-size: 1.75rem;
   text-align: center;
   text-transform: uppercase;
   margin-bottom: 2rem;
@@ -23,7 +23,7 @@
 .page-subheading {
   text-align: center;
   margin-bottom: 3rem;
-  font-size: 1.25rem;
+  font-size: 1.1rem;
 }
 
 .force-center {
@@ -42,6 +42,14 @@
 @media screen and (min-width: 768px) {
   .sm { display: none; }
   .lg { display: block; }
+
+  .page-heading {
+    font-size: 2.5rem;
+  }
+  
+  .page-subheading {
+    font-size: 1.25rem;
+  }
 }
 
 .place-holder {
