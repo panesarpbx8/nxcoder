@@ -1,5 +1,6 @@
 ---
 title: Integrating Firebase Into Angular
+slug: integrating-firebase-into-angular
 headline: Starter template for adding firebase in angular with firebase hosting
 hashtags: [angular, firebase]
 createdAt: Jul 15, 2021
@@ -24,11 +25,11 @@ $ ng new ngx-firestarter --routing --style=scss
 
 Create a new firebase project from their [console](https://console.firebase.google.com) and do as follow.
 
-<BlogImage src="firebase.gif" alt="Creating firebase project" title={frontmatter.title} />
+<BlogImage src="firebase.gif" alt="Creating firebase project" slug={frontmatter.slug} />
 
 After creating firebase project, register a new web app and copy the firebase config.
 
-<BlogImage src="webapp.gif" alt="Creating new web app" title={frontmatter.title} />
+<BlogImage src="webapp.gif" alt="Creating new web app" slug={frontmatter.slug} />
 
 ## Installing firebase
 

@@ -1,5 +1,6 @@
 ---
 title: Simple Redux pattern in Angular
+slug: simple-redux-pattern-in-angular
 headline: Creating a state management solution that follows redux pattern for small angular projects
 hashtags: [angular, redux, rxjs]
 createdAt: Jul 11, 2021
@@ -20,7 +21,7 @@ The idea behind using redux pattern is to create a predictable one way data flow
 $ ng new angular-redux
 ```
 
-<BlogImage src="reduxflow.png" alt="redux pattern visualized" title={frontmatter.title}/>
+<BlogImage src="reduxflow.png" alt="redux pattern visualized" slug={frontmatter.slug}/>
 
 ## State model
 

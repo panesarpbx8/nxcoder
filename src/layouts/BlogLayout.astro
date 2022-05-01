@@ -5,17 +5,15 @@ import LatestBlogs from '../components/LatestBlogs.astro';
 import SimilarBlogs from '../components/SimilarBlogs.astro';
 import BlogHero from '../components/BlogHero.astro';
 import Toc from '../components/Toc.astro';
-import { slugify } from '../util/helper';
 
 const { content } = Astro.props;
 const tocs = content.astro.headers;
-const slug = slugify(content.title);
 ---
 
 <BaseLayout title={content.title} 
   description={content.headline} 
-  url={`/blogs/${slug}`} 
-  image={`/blogs/${slug}/cover.png`}>
+  url={`/blogs/${content.slug}`} 
+  image={`/blogs/${content.slug}/cover.png`}>
 
   <meta name="author" content={content.author}>
   <meta name="author-image" content={content.authorImage}>
@@ -25,12 +23,12 @@ const slug = slugify(content.title);
   <div class="blog blog-wrapper">
     <div class="article"> 
       <div class="blog__cover">
-        <img src={`/blogs/${slug}/cover.png`} alt={content.title}>
+        <img src={`/blogs/${content.slug}/cover.png`} alt={content.title}>
       </div> 
       <div class="blog__content"><slot></slot></div>
     </div>
     <div class="side-panel">
-      <save-button slug={slug}></save-button>
+      <save-button slug={content.slug}></save-button>
       <div class="blog__hashtags">
         <h1>Hashtags</h1>
         <HashtagList hashtags={content.hashtags} />

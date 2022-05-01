@@ -1,5 +1,6 @@
 ---
 title: Using TypeScript with Express
+slug: using-typescript-with-express
 headline: Create solid typescript express starter boilerplate to kickstart your projects
 hashtags: [typescript, express]
 createdAt: Jul 06, 2021
@@ -175,7 +176,7 @@ GET http://localhost:3000
 GET http://localhost:3000/bob-marley
 ```
 
-<BlogImage src="test.png" alt="testing typescript express api" title={frontmatter.title} />
+<BlogImage src="test.png" alt="testing typescript express api" slug={frontmatter.slug} />
 
 ## Scripts
 

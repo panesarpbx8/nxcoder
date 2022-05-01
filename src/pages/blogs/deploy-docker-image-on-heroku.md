@@ -1,5 +1,6 @@
 ---
 title: Deploy Docker image on Heroku
+slug: deploy-docker-image-on-heroku
 headline: Configure and define docker file in a project and deploy docker container to heroku server
 hashtags: [docker, heroku]
 createdAt: Jun 30, 2021

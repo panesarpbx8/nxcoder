@@ -112,9 +112,11 @@ nav {
     z-index: unset;
 
     flex-direction: row;
+    align-items: center;
     padding: 0;
     margin-top: 0;
     transform: unset;
+    background-color: transparent;
 
     .buttons {
       flex-direction: row;

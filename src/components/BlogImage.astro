@@ -1,9 +1,7 @@
 ---
-import { slugify } from '../../util/helper';
+let { src, alt, slug } = Astro.props;
 
-let { src, alt, title } = Astro.props;
-
-src = `/blogs/${slugify(title)}/${src}`;
+src = `/blogs/${slug}/${src}`;
 ---
 
 <img src={src} alt={alt}>

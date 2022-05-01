@@ -1,5 +1,6 @@
 ---
 title: Simplified Http Services with Typescript
+slug: simplified-http-services-with-typescript
 headline: Creating a firebase service that can be extended by angular services to provide crud operations
 hashtags: [angular, typescript]
 createdAt: Jun 24, 2021

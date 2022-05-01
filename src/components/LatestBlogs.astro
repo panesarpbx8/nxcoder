@@ -1,8 +1,8 @@
 ---
 import BlogList from './BlogList.astro';
-import { Blog, sortByDate } from '../../util/blog';
+import { Blog, sortByDate } from '../util/blog';
 
-const blogs: Blog[] = await Astro.glob('../../pages/blogs/*.md');
+const blogs: Blog[] = await Astro.glob('../pages/blogs/*.md');
 const { count } = Astro.props;
 
 const latestBlogs = sortByDate(blogs).splice(0, count); 

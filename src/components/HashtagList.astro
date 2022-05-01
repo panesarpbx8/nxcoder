@@ -32,7 +32,7 @@ const { hashtags, heading } = Astro.props;
 }
 
 .hashtag.heading {
-	font-size: 3rem;
+	font-size: 2rem;
 	text-transform: capitalize;
 }
 
@@ -64,5 +64,12 @@ const { hashtags, heading } = Astro.props;
 .heroku {
 	color: white;
 	background-color: #7E57C2;
+}
+
+
+@media screen and (min-width: 768px) {
+	.hashtag.heading {
+		font-size: 3rem;
+	}
 }
 </style>
