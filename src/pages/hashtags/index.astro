@@ -1,6 +1,6 @@
 ---
 import BaseLayout from '../../layouts/BaseLayout.astro';
-import HashtagList from '../../components/blogs/HashtagList.astro';
+import HashtagList from '../../components/HashtagList.astro';
 
 let data: any = await Astro.glob('../blogs/**/*.md');
 data = data.map(data => data.frontmatter.hashtags);

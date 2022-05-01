@@ -1,10 +1,10 @@
 ---
 import BaseLayout from './BaseLayout.astro';
-import HashtagList from '../components/blogs/HashtagList.astro';
-import LatestBlogs from '../components/blogs/LatestBlogs.astro';
-import SimilarBlogs from '../components/blogs/SimilarBlogs.astro';
-import BlogHero from '../components/blogs/BlogHero.astro';
-import Toc from '../components/blogs/Toc.astro';
+import HashtagList from '../components/HashtagList.astro';
+import LatestBlogs from '../components/LatestBlogs.astro';
+import SimilarBlogs from '../components/SimilarBlogs.astro';
+import BlogHero from '../components/BlogHero.astro';
+import Toc from '../components/Toc.astro';
 import { slugify } from '../util/helper';
 
 const { content } = Astro.props;
@@ -96,7 +96,7 @@ const slug = slugify(content.title);
       font-family: 'Fira Code', monospace;
       border-radius: 2px;
      
-      max-width: calc(100vw - (1.5rem * 2));
+      max-width: calc(100vw - (1rem * 2));
       overflow-x: auto;
       
       /* width */
