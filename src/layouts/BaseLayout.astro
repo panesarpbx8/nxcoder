@@ -1,6 +1,5 @@
 ---
 import BaseHead from '../components/BaseHead.astro';
-import Navbar from '../components/Navbar.astro';
 import Footer from '../components/Footer.astro';
 
 let title: string = Astro.props['title'] || 'nxcoder';
@@ -12,7 +11,7 @@ let image: string = Astro.props['image'] || '';
 <html lang="en">
 	<BaseHead title={title} description={description} url={url} image={image}/>
 	<body>
-		<Navbar/>
+		<nav-bar></nav-bar>
     <main class="container route">
       <slot/>
     </main>

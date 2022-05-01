@@ -104,7 +104,21 @@ nav {
   }
 
   .links {
-    display: flex;
+    position: unset;
+    top: unset;
+    left: unset;
+    height: unset;
+    width: unset;
+    z-index: unset;
+
+    flex-direction: row;
     padding: 0;
+    margin-top: 0;
+    transform: unset;
+
+    .buttons {
+      flex-direction: row;
+      align-items: center;
+    }
   }
 }
