@@ -2,10 +2,9 @@
 import '../styles/global.scss';
 
 let { title, description, url, image } = Astro.props;
-const baseUrl = 'https://nxcoder.vercel.app';
 
-url = baseUrl + url;
-image = baseUrl + image;
+url = Astro.site.origin + url;
+image = Astro.site.origin + image;
 ---
 	
 <head>
