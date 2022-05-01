@@ -18,6 +18,7 @@ import { GoogleButtonComponent } from './google-button/google-button.component';
 import { UserJsonComponent } from './user-json/user-json.component';
 import { LoaderComponent } from './loader/loader.component';
 import { SearchBarComponent } from './search-bar/search-bar.component';
+import { NavBarComponent } from './nav-bar/nav-bar.component';
 
 const elements: [any, string][] = [
   [UserDataComponent, 'user-data'],
@@ -31,6 +32,7 @@ const elements: [any, string][] = [
   [UserJsonComponent, 'user-json'],
   [LoaderComponent, 'element-loader'],
   [SearchBarComponent, 'search-bar'],
+  [NavBarComponent, 'nav-bar'],
 ];
 
 @NgModule({
@@ -46,6 +48,7 @@ const elements: [any, string][] = [
     UserJsonComponent,
     LoaderComponent,
     SearchBarComponent,
+    NavBarComponent,
   ],
   imports: [
     BrowserModule,

@@ -1,0 +1,46 @@
+
+<header>
+  <nav class="container">
+    <div class="logo">
+      <a href="/">NXCODER</a>
+    </div>
+    
+    <div class="menu" (click)="toggle()">
+      <i class="fa-solid fa-bars-staggered"></i>
+    </div>
+    
+    <div class="links" #links>
+      <div class="link">
+        <a href="/blogs">Blogs</a>
+      </div>
+
+      <div class="link">
+        <a href="/hashtags">Hashtags</a>
+      </div>
+      
+      <div class="buttons">
+        <a [href]="github" target="_blank">
+          <i class="fa-brands fa-github"></i>
+        </a>
+      
+        <app-theme-switcher></app-theme-switcher>
+      
+        <a href="/search">
+          <i class="fa-solid fa-magnifying-glass"></i>
+        </a>
+      
+        <div *ngIf="auth.user$ | async as user; else noUser">
+          <a href="/dashboard">
+            <img [src]="user.photoURL" [alt]="user.displayName">
+          </a>
+        </div>
+
+        <ng-template #noUser>
+          <a href="/login">
+            <i class="fa-solid fa-user-astronaut"></i>
+          </a>
+        </ng-template>
+      </div>
+    </div>
+  </nav>
+</header>
