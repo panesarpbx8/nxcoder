@@ -1,11 +1,14 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
+import HomeHero from '../components/HomeHero.astro';
 import LatestBlogs from '../components/LatestBlogs.astro';
 ---
 
 <BaseLayout>
-	<a href="/blogs">Blogs</a>
 
+	<HomeHero/>
+	
+	<h1 class="page-heading">Recent blogs</h1>
 	<LatestBlogs count={3}></LatestBlogs>
 </BaseLayout>
 

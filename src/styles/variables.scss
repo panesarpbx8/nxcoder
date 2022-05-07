@@ -1,8 +1,15 @@
+// #24C8DC blue
+// #E8AF2D yellow
+
 :root {
   --primary-color: #128a9c;
   --primary-light: #128a9c1d;
   --primary-dark: #0e7080;
-  
+	
+	--accent-color: #E8AF2D;
+  --accent-light: #e8b02d28;
+  --accent-dark: #dea729;
+	
 	--green-color: hsl(137, 58%, 45%);
 	--green-hover: hsl(137, 58%, 42%);
 	--green-light: hsl(137, 58%, 45%, .1);
@@ -11,9 +18,8 @@
 	--red-hover: hsl(354, 79%, 44%);
 	--red-light: hsl(354, 79%, 56%, .1);
   
-	--nav-link: #46566dd8;
-	--nav-link-hover: var(--primary);
-	--nav-icon: #46566d93;
+	--nav-link: var(--text);
+	--nav-link-hover: var(--primary-color);
 
   --shadow: 0 5px 10px #59626b11;
   
@@ -23,13 +29,21 @@
   
 	--disabled-text-color: rgb(195, 206, 211);
 
-	--window-width: 1250px;
+	// --window-width: 1250px;
 }
 
 .dark {
   --primary-color: #50d7ea;
   --primary-light: #50d7ea25;
   --primary-dark: #49c7d8;
+	
+	--accent-color: #E8AF2D;
+  --accent-light: #e8b02d28;
+  --accent-dark: #dea729;
+  
+	--nav-link: var(--text);
+	--nav-link-hover: var(--primary-color);
+	
   --shadow: 0 0 0 #1c1f2250;
 
   --bg: #181c20;

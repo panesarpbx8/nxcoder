@@ -10,7 +10,7 @@ header {
   z-index: 10;
 }
 
-nav { 
+nav {
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -21,6 +21,8 @@ nav {
 .logo {  
   color: var(--primary-color);
   font-size: 1.75rem;
+  display: grid;
+  place-items: center;
 
   a {
     font-family: 'Aquire', 'Baloo Thambi 2', sans-serif;
@@ -67,15 +69,19 @@ nav {
   }
 
   .link {
-    font-size: 1.1rem;
+    font-size: 1rem;
     text-transform: uppercase;
     letter-spacing: 1px;
+
+    a {
+      color: var(--nav-link);
+    }
+
+    a:hover {
+      color: var(--nav-link-hover);
+    }
   }
 
-  a:hover {
-    color: var(--primary-dark);
-  }
-  
   i {
     color: var(--primary-color);
     font-size: 1.5rem;

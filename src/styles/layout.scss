@@ -5,7 +5,7 @@
 }
 
 .route {
-  animation: routeIn 200ms ease-in-out;
+  animation: routeIn 400ms ease-in-out;
 }
 
 .rotate {
@@ -49,6 +49,10 @@
   
   .page-subheading {
     font-size: 1.25rem;
+  }
+
+  .container {
+    padding: 0 2rem;
   }
 }
 
@@ -110,14 +114,14 @@
 @keyframes routeIn {
   from {
     opacity: 0;
-    transform: translateY(-2rem);
+    transform: translateX(4rem);
   }
   50% {
     opacity: 0;
   }
   to {
     opacity: 1;
-    transform: translateY(0);
+    transform: translateX(0);
   } 
 }
 

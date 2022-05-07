@@ -32,6 +32,10 @@ body {
   padding: 0;
 }
 
+body, header {
+  overflow-x: hidden;
+}
+
 h1, h2, h3, p {
   margin: 0;
 }
